@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\assets",
+    "\\assets\\fonts",
+    "\\assets\\images",
+    "\\constants",
+    "\\hooks",
+    "\\Screens",
+    "\\scripts"
+  ],
+  "SelectedNode": "\\app\\_layout.tsx",
+  "PreviewInSolutionExplorer": false
+}
