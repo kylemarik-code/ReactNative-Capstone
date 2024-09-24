@@ -32,7 +32,7 @@ const Onboarding = ({navigation }) => {
 		} catch (e:any) {
 			console.log(e.message);
 		} finally {
-			navigation.replace('Profile');
+			navigation.replace('Home');
 		}
 	}
 

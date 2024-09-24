@@ -6,6 +6,12 @@ import {
   createTable, saveMenuItems, removeTable, getMenuItems, filterData
 } from '../database';
 
+//to do: add debounce of 500ms to search query
+//to do: Avatar doesn't update if user goes back vs. pressing home
+//to do : avoid having to get avatar and name for placeholder from memory
+//to do: abstract things to components
+//to do: figure out how to beter use _layout, expo etc.
+
 const API_URL =
     'https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json';
 const sections = ['starters','mains','desserts','drinks','specials'];
@@ -27,17 +33,12 @@ const listSeperator = () => {
     );
 }
 
-//to do: Avatar doesn't update if user goes back vs. pressing home
-//to do: DISMISS KEYBOARD
-//to do : avoid having to get avatar and name for placeholder from memory
-//to do: abstract things to components
-//to do: figure out how to beter use _layout, expo etc.
 
 const Home = ({navigation}) => {
     const firstRender = useRef(true);
     const [avatar, setAvatar] = useState('');
     const [userInits, setUserInits] = useState('')
-    const [menuItems, setMenuItems] = useState('');
+    const [menuItems, setMenuItems] = useState({});
     const [isLoading, setLoading] = useState(true);
     const [filters, setFilters] = useState([]);
     const [searchText, setSearchText] = useState('');
